@@ -87,12 +87,20 @@
         </div>
 
         <br><mat-divider/>
-        <h3>On Viewport</h3>
-        <div #trigger>
+        <h3>On Viewport-trigger</h3>
+        <div #trigger></div>
         @defer (on viewport(trigger)) {
           <app-viewport-lazy />
         }
-        </div>
+
+        <br><mat-divider/>
+        <h3>On Viewport</h3>
+        @defer (on viewport) {
+          <app-viewport-lazy />
+        } @placeholder {
+          <div>Calendar placeholder</div>
+        }
+        
 
         
         <br><mat-divider/>
